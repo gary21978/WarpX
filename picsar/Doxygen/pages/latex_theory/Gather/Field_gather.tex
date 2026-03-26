@@ -1,0 +1,32 @@
+\input{../newcommands}
+
+In general, the field is gathered from the mesh onto the macroparticles
+using splines of the same order as for the current deposition $\mathbf{S}=\left(S_{x},S_{y},S_{z}\right)$.
+Three variations are considered:
+\begin{itemize}
+\item ``momentum conserving'': fields are interpolated from the grid nodes
+to the macroparticles using $\mathbf{S}=\left(S_{nx},S_{ny},S_{nz}\right)$
+for all field components (if the fields are known at staggered positions,
+they are first interpolated to the nodes on an auxiliary grid),
+\item ``energy conserving (or Galerkin)'': fields are interpolated from
+the staggered Yee grid to the macroparticles using $\left(S_{nx-1},S_{ny},S_{nz}\right)$
+for $E_{x}$, $\left(S_{nx},S_{ny-1},S_{nz}\right)$ for $E_{y}$,
+$\left(S_{nx},S_{ny},S_{nz-1}\right)$ for $E_{z}$, $\left(S_{nx},S_{ny-1},S_{nz-1}\right)$
+for $B_{x}$, $\left(S_{nx-1},S_{ny},S_{nz-1}\right)$ for $B{}_{y}$
+and$\left(S_{nx-1},S_{ny-1},S_{nz}\right)$ for $B_{z}$ (if the fields
+are known at the nodes, they are first interpolated to the staggered
+positions on an auxiliary grid),
+\item ``uniform'': fields are interpolated directly form the Yee grid
+to the macroparticles using $\mathbf{S}=\left(S_{nx},S_{ny},S_{nz}\right)$
+for all field components (if the fields are known at the nodes, they
+are first interpolated to the staggered positions on an auxiliary
+grid).
+\end{itemize}
+As shown in \cite{BirdsallLangdon,HockneyEastwoodBook,LewisJCP1972},
+the momentum and energy conserving schemes conserve momentum and energy
+respectively at the limit of infinitesimal time steps and generally
+offer better conservation of the respective quantities for a finite
+time step. The uniform scheme does not conserve momentum nor energy
+in the sense defined for the others but is given for completeness,
+as it has been shown to offer some interesting properties in the modeling
+of relativistically drifting plasmas \cite{GodfreyJCP2013}.
