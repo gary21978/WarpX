@@ -16,7 +16,6 @@
 #include <AMReX_ParticleCommunication.H>
 #include <AMReX_ParticleLocator.H>
 #include <AMReX_DenseBins.H>
-#include <AMReX_SparseBins.H>
 #include <AMReX_ParticleTransformation.H>
 #include <AMReX_ParticleMesh.H>
 #include <AMReX_ParIter.H>

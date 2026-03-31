@@ -15,12 +15,6 @@ CEXE_headers += AMReX_ArrayOfStructs.H
 CEXE_headers += AMReX_ParticleTile.H
 CEXE_headers += AMReX_MakeParticle.H
 
-CEXE_headers += AMReX_NeighborParticles.H
-CEXE_headers += AMReX_NeighborParticlesI.H
-CEXE_headers += AMReX_NeighborParticlesCPUImpl.H
-CEXE_headers += AMReX_NeighborParticlesGPUImpl.H
-CEXE_headers += AMReX_NeighborList.H
-
 CEXE_headers += AMReX_TracerParticles.H
 CEXE_sources += AMReX_TracerParticles.cpp
 CEXE_headers += AMReX_TracerParticle_mod_K.H
@@ -52,7 +46,6 @@ CEXE_headers += AMReX_WriteBinaryParticleData.H
 CEXE_headers += AMReX_ParticleTransformation.H
 
 CEXE_headers += AMReX_DenseBins.H
-CEXE_headers += AMReX_SparseBins.H
 CEXE_headers += AMReX_BinIterator.H
 
 VPATH_LOCATIONS += $(AMREX_HOME)/Src/Particle
